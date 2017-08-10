@@ -9,21 +9,17 @@ import com.ctli.it.library.TestEnvironment;
 
 import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
-import com.ctli.it.HAMPSTEST.AppiumServerStart.*;
 
-@TestEnvironment(Environment.ITV2)
+@TestEnvironment(Environment.ITV1)
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features="src/test/resources/Features",
-tags =  {"@Appium"},glue = "com.ctli.it.StepDefination",plugin = {"pretty", "html:target/cucumber-htmlreport","json:target/cucumber-report.json"})
+tags =  {"@Appium"},glue = "com.ctli.it.mobilestepefination",plugin = {"pretty", "html:target/cucumber-htmlreport","json:target/cucumber-report.json"})
 public class MobileRunnerClass {
 	@BeforeClass
 	public static void setEnvironment() {
-	AppiumServerStart.startAppiumServer();
 		ExcelUtils.setPropertiesValue();
-
-		
+		AppiumServerStarting.appiumStart();
 //		STAFEnvironment.registerEnvironment(RunnerClass.class);
-//		System.out.println("Ankit kumar singh6778");
 //		Steps.initialize();
 	}
 }

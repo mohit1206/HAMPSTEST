@@ -13,7 +13,7 @@ public class BookMyPageStepDefination {
 	
 	@Given("^User is at home page \"([^\"]*)\" of book my trip\\.$")
 	public void user_is_at_home_page_of_book_my_trip(String arg1) throws Throwable {
-		bmsp.homePage(arg1);
+		bmsp.homePage();
 	}
 
 	
