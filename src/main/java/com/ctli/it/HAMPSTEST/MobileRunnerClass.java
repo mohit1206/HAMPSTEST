@@ -13,7 +13,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 @TestEnvironment(Environment.ITV1)
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features="src/test/resources/Features",
-tags =  {"@Appium"},glue = "com.ctli.it.mobilestepefination",plugin = {"pretty", "html:target/cucumber-htmlreport","json:target/cucumber-report.json"})
+tags =  {"@Appium"},glue = "com.ctli.it.mobilestepdefination",plugin = {"pretty", "html:target/cucumber-htmlreport","json:target/cucumber-report.json"})
 public class MobileRunnerClass {
 	@BeforeClass
 	public static void setEnvironment() {
